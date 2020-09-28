@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Source+Code+Pro:wght@700&display=swap");
+
+#login {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  height: 100vh;
+}
+#signup {
+  position: absolute;
+  display: none;
+  z-index: 2;
+  height: 100vh;
+}
