@@ -1,43 +1,34 @@
-import React, { Component } from "react";
+import React from "react";
 
-function Login() {
-  return (
-    <>
-      <div className="container" id="login">
-        <div className="row justify-content-center">
-          <div className="jumbotron">
-            <form>
-              <div className="form-group">
-                <label for="email">email:</label>
-                <input
-                  type="text"
-                  name="email"
-                  className="form-control"
-                  id="email"
-                  required
-                />
-                <label for="password">password:</label>
-                <input
-                  type="password"
-                  name="password"
-                  className="form-control"
-                  id="password"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="form-control btn btn-primary my-2"
-                >
-                  Login
-                </button>
-                Remember my Password?
-                <input type="checkbox" className="mx-1" />
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </>
+import "./login.css";
+
+
+const Login = () => (
+    <div className="light login">
+      <form>
+        <div className="theme-toggle">
+		      <input type="button" id="theme-toggle-btn" />
+		      <label for="theme-toggle-btn">
+			      <i class="fas fa-moon toggle-icon"></i>
+		      </label>
+	      </div>
+        <h1> sign in </h1>
+	      <div class="social-media-list">
+		      <a href="#"><i class="fab fa-facebook-f"></i></a>
+		      <a href="#"><i class="fab fa-google"></i></a>
+		      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+	      </div>
+      	<div class="input-group">
+		      <label for="email-input"> Email </label>
+		      <input type="email" id="email-input" autocomplete="off" />
+	      </div>
+	      <div class="input-group">
+		      <label for="password-input"> Password </label>
+		      <input type="password" id="password-input" autocomplete="off" />
+    	  </div>
+	      <a href="#" class="forgot-password">forgot password ?</a>
+	      <button class="signIn-btn">Sign in</button>
+      </form>
+    </div>
   );
-}
 export default Login;
