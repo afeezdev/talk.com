@@ -16,7 +16,9 @@ class Home extends React.Component {
             </h1>
           </div>
           <div className="row  col-sm-12 col-md-12 col-lg-12 justify-content-center ">
-            <button className="btn btn-outline-primary mx-1 ">Log in</button>
+            <button className="btn btn-outline-primary mx-1 "> 
+              <a href='/login'> Login </a> 
+            </button>
             <button className="btn btn-outline-secondary ">Register</button>
           </div>
         </div>

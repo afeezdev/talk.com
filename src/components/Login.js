@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 
-import "./login.css";
+import "./login.scss";
 
 
-const Login = () => (
-    <div className="light login">
+const Login = () => {
+  const [ theme, setTheme ] = useState(true)
+
+  const themeToggle = () => {
+    theme ? setTheme(false) : setTheme(true)
+  }
+
+  return (
+    <div className= { theme ? 'light' : 'dark' } >
       <form>
         <div className="theme-toggle">
-		      <input type="button" id="theme-toggle-btn" />
+		      <input type="button" id="theme-toggle-btn"  onClick={themeToggle} />
 		      <label for="theme-toggle-btn">
-			      <i class="fas fa-moon toggle-icon"></i>
+			      <i class={theme ? "fas fa-moon toggle-icon" : "fas fa-sun toggle-icon"}></i>
 		      </label>
 	      </div>
         <h1> sign in </h1>
@@ -30,5 +37,6 @@ const Login = () => (
 	      <button class="signIn-btn">Sign in</button>
       </form>
     </div>
-  );
+  )
+};
 export default Login;

@@ -1,10 +1,10 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 import { Navbar, Nav } from "react-bootstrap";
 
 class Header extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.loginClick.bind(this);
+  constructor() {
+    super();
   }
   loginClick(evt) {
     // show login form
@@ -14,14 +14,16 @@ class Header extends React.Component {
   render() {
     return (
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Navbar.Brand href="#home">Talk.com</Navbar.Brand>
+        <Navbar.Brand href="/">Talk.com</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto">
-            <Nav.Link href="#features" onClick={this.loginClick}>
+            <Nav.Link href="/features" onClick={this.loginClick}>
               LogIn
             </Nav.Link>
-            <Nav.Link href="#pricing">Status</Nav.Link>
+            <Nav.Link href="/pricing">
+              Status
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
